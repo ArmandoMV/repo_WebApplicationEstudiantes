@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección Estudiantes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sección Estudiantes</h1>
+        <div class="d-flex justify-content-between">
+            <div>
+                <button id="loadStudentsButton" class="btn btn-primary">Listar Estudiantes</button>
+                <div id="loadingMessage" style="display:none;" class="mt-2">Cargando estudiantes...</div>
+                <div id="errorMessage" class="alert alert-danger" role="alert" style="display:none;">
+                    Error al cargar los estudiantes.
+                </div>
+            </div>
+            <div>
+                <h2>Lista de estudiantes</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentList"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/estudiantes.js"></script>
+</body>
+</html>
